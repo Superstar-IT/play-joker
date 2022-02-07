@@ -1,0 +1,47 @@
+.dashboard-page {
+    .dashboard-settings-page {
+        .main-settings-content {
+            .input-content {
+                max-width: 560px;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-column-gap: 35px;
+                grid-row-gap: 33px;
+
+                .input-item {
+                    display: flex;
+                    flex-direction: column;
+
+                    .label {
+                        font-size: 16px;
+                        line-height: 127%;
+                        color: #fff;
+                        margin-bottom: 12px;
+                    }
+
+                    .ant-input,
+                    .ant-select-selector {
+                        height: 45px;
+                        border-radius: 5px;
+                        font-size: 16px;
+                        padding-left: 18px !important;
+                        padding-right: 18px !important;
+                    }
+                }
+            }
+
+            .btn-save {
+                max-width: 240px;
+                width: 100%;
+                height: 56px;
+                margin-top: 48px;
+            }
+
+            @media only screen and (max-width: 900px) {
+                .input-content {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+        }
+    }
+}

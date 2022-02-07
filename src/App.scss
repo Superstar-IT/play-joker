@@ -1,0 +1,58 @@
+body {
+    --main-color1: #1a173e;
+    --main-color2: #74b4ff;
+    --main-color3: #0da2d8;
+    --main-color4: #191735;
+    --main-color5: #ff7575;
+    --main-color6: #2dc7ff;
+    --main-color7: #1a1836;
+}
+
+* {
+    outline: none;
+}
+
+input,
+.ant-select-selector {
+    color: #fff !important;
+    background-color: var(--main-color4) !important;
+    border: 1px solid rgba(255, 255, 255, 0.19) !important;
+    box-sizing: border-box;
+    // padding: 0px 25px !important;
+
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.21) !important;
+    }
+}
+
+.ant-select-selection-item {
+    display: flex;
+    align-items: center;
+}
+
+.ant-select-suffix {
+    color: #fff !important;
+}
+
+.ant-select-dropdown {
+    z-index: 10000 !important;
+}
+
+button {
+    box-shadow: none !important;
+    border-radius: 12px !important;
+    font-weight: bold !important;
+    text-transform: none !important;
+}
+
+.ant-popover-inner {
+    background-color: transparent !important;
+
+    .ant-popover-inner-content {
+        padding: 0px !important;
+    }
+}
+
+.ant-popover-arrow {
+    display: none !important;
+}

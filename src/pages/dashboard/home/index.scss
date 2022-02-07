@@ -1,0 +1,168 @@
+.dashboard-home-page {
+    display: flex;
+    flex-direction: column;
+    padding-top: 45px;
+
+    .total-content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 50px;
+
+        .total-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(199.31deg, #282458 -1.62%, #262353 60.4%, rgba(62, 59, 115, 0) 113.63%);
+            filter: drop-shadow(0px 48px 69px rgba(23, 18, 43, 0.75));
+            border-radius: 10px;
+            height: 210px;
+
+            .label {
+                font-size: 18px;
+                line-height: 127%;
+                color: rgba(116, 180, 255, 0.7);
+                margin-bottom: 18px;
+            }
+
+            .value {
+                font-size: 65px;
+                line-height: 127%;
+                font-weight: bold;
+                color: var(--main-color2);
+            }
+
+            &.cancel {
+                .label {
+                    color: rgba(255, 117, 117, 0.7);
+                }
+
+                .value {
+                    color: #ff8989;
+                }
+            }
+        }
+    }
+
+    .data-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 50px;
+        padding: 35px 0px 60px 0px;
+        background: linear-gradient(199.31deg, #282458 -1.62%, #262353 60.4%, rgba(62, 59, 115, 0) 113.63%);
+        border-radius: 10px;
+        box-sizing: border-box;
+
+        .title-content {
+            display: flex;
+            align-items: center;
+            padding: 0px 20px 0px 40px;
+            margin-bottom: 25px;
+            box-sizing: border-box;
+
+            .title {
+                font-size: 18px;
+                line-height: 127%;
+                color: rgb(116, 180, 255, 0.7);
+                margin-right: 10px;
+            }
+
+            .count {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 49px;
+                height: 32px;
+                background-color: var(--main-color2);
+                border-radius: 100px;
+                font-size: 15px;
+                line-height: 127%;
+                font-weight: bold;
+                color: #fff;
+            }
+
+            .btn-release {
+                padding: 0px;
+                color: var(--main-color2);
+                font-size: 12px;
+                margin-left: auto;
+            }
+        }
+
+        .scroll-content {
+            position: relative;
+            overflow: hidden;
+
+            .release-content {
+                display: inline-flex;
+
+                .release-item {
+                    min-width: 265px;
+                    margin-left: 40px;
+
+                    &:last-child {
+                        margin-right: 40px;
+                    }
+                }
+            }
+
+            .mask {
+                position: absolute;
+                top: 0;
+                right: -58px;
+                width: 135px;
+                height: 100%;
+                background: linear-gradient(270deg, #282558 37.78%, rgba(40, 37, 88, 0) 100%);
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1000px) {
+        .total-content {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        .total-content {
+            grid-template-columns: repeat(1, 1fr);
+
+            .total-item {
+                height: 150px;
+                
+                .value {
+                    font-size: 50px !important;
+                }
+            }
+        }
+
+        .data-content {
+            .title-content {
+                padding: 0px 15px !important;
+
+                .title {
+                    font-size: 14px !important;
+                }
+
+                .count {
+                    width: 30px !important;
+                    height: 15px !important;
+                    font-size: 11px !important;
+                }
+
+                .btn-release {
+                    font-size: 10px !important;
+                }
+            }
+
+            .release-item {
+                margin-left: 15px !important;
+
+                &:last-child {
+                    margin-right: 15px !important;
+                }
+            }
+        }
+    }
+}

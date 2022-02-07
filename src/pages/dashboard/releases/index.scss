@@ -1,0 +1,109 @@
+.dashboard-releases-page {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(199.31deg, #282458 -1.62%, #262353 60.4%, rgba(62, 59, 115, 0) 113.63%);
+    border-radius: 10px;
+    margin-top: 38px;
+    padding: 0px 50px;
+
+    .title-content {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 28px 0px;
+        z-index: 100;
+
+        .title {
+            font-size: 18px;
+            line-height: 127%;
+            color: rgba(116, 180, 255, 0.7);
+            text-transform: uppercase;
+        }
+
+        .count {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 49px;
+            height: 32px;
+            color: #fff;
+            background-color: var(--main-color2);
+            border-radius: 100px;
+            margin-left: 14px;
+        }
+    }
+
+    .releases-content {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 40px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 630px;
+        padding: 0px 60px;
+
+        .release-item {
+            min-width: unset;
+            position: relative;
+            z-index: 1000;
+        }
+
+        &::-webkit-scrollbar {
+            width: 3px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--main-color2);
+            border-radius: 4px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: rgba(255, 255, 255, 0.04);
+            border-radius: 4px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .dashboard-releases-page {
+        padding: 0px 30px;
+
+        .releases-content {
+            padding: 0px 35px;
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .dashboard-releases-page {
+        .releases-content {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .dashboard-releases-page {
+        .releases-content {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .dashboard-releases-page {
+        padding: 0px 20px;
+
+        .title-content {
+            padding: 15px 0px;
+        }
+
+        .releases-content {
+            padding: 0px 20px;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 20px;
+        }
+    }
+}
